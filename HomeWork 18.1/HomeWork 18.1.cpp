@@ -47,6 +47,22 @@ int main()
     strcpy_s(employees[4].position, "Бухгалтер");
     employees[4].salary = 55000;
     strcpy_s(employees[4].education, "Высшее");
+
+    // Определяем количество работников старше 60 лет и выводим их информацию
+    int olderThan60 = 0;
+    for (int i = 0; i < 5; i++) {
+        if (2023 - employees[i].birthYear > 60) {
+            olderThan60++;
+            cout << "Фамилия: " << employees[i].lastName << endl;
+            cout << "Год рождения: " << employees[i].birthYear << endl;
+            cout << "Должность: " << employees[i].position << endl;
+            cout << "Зарплата: " << employees[i].salary << endl;
+            cout << "Образование: " << employees[i].education << endl;
+            cout << endl;
+        }
+    }
+
+    cout << "Всего работников старше 60 лет: " << olderThan60 << endl;
 }
 
 
